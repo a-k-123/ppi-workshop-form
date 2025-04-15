@@ -42,7 +42,6 @@ export default function RegistrationForm() {
     setErrors(newErrors);
     if (Object.keys(newErrors).length === 0) {
       alert("Form submitted!");
-      // handle actual submission here
     }
   };
 
@@ -67,7 +66,7 @@ export default function RegistrationForm() {
     "North Middlesex University Hospital NHS Trust",
     "North Thames Genomic Medicine Service",
     "Queen Mary University of London",
-    "Royal Free London NHS Trust",
+    "Royal Free London NHS Foundation Trust",
     "Royal National Orthopaedic Hospital NHS Trust",
     "The Tavistock and Portman NHS Foundation Trust",
     "Whittington Health NHS Trust"
@@ -143,28 +142,6 @@ export default function RegistrationForm() {
                   <SelectItem value="Purchase Order (PO)">Purchase Order (PO)</SelectItem>
                 </SelectContent>
               </Select>
-              {paymentMethod === "Bank Transfer (BACS)" && (
-                <p className="text-sm mt-2">
-                  Please contact the PPI Team: ppihelpdesk@ucl.ac.uk and include:
-                  <ul className="list-disc pl-5">
-                    <li>Name(s) of workshop participant</li>
-                    <li>Organisation</li>
-                    <li>Organisation type (non-profit/for-profit/industry/pharmaceutical)</li>
-                    <li>Number of workshops</li>
-                  </ul>
-                  Payment must be received before submission. Space is only confirmed once proof of payment has been received.
-                </p>
-              )}
-              {paymentMethod === "Purchase Order (PO)" && (
-                <p className="text-sm mt-2">
-                  Please liaise with your organisation’s finance team. The Purchase Order should include:
-                  <ul className="list-disc pl-5">
-                    <li>Name(s) of workshop participant</li>
-                    <li>Date and title of workshop(s)</li>
-                  </ul>
-                  Your space will only be confirmed once the PO has been received.
-                </p>
-              )}
             </div>
           )}
 
